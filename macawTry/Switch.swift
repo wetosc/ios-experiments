@@ -42,9 +42,9 @@ class Switch: Group {
         super.init(contents: [bgOval, circle, text])
     }
     
-    public var state: Bool = true {
+    public var state: Bool = false {
         didSet {
-            if state { toOFF() } else { toON() }
+            if state { toON() } else { toOFF() }
         }
     }
     
