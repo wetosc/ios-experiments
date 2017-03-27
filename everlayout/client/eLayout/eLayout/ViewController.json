@@ -1,0 +1,8 @@
+{
+    "name":"ViewController",
+    "root":{
+        "properties": {
+            "backgroundColor":"orange"
+        }
+    }
+}
