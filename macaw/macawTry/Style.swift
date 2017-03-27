@@ -12,9 +12,9 @@ class Style {
     
     static let bgColor = Color(val: 0x32373E)
     static let switchBGColor = Color(val: 0x1E2126)
-    static let switchPrimaryColor = Color(val: 0x2E9B95)
-    static let switchSecondaryColor = Color(val: 0xEC7F5A)
-    
+    static let primaryColor = Color(val: 0xEC7F5A)
+    static let secondaryColor = Color(val: 0x2E9B95)
+    static let lightGrayColor = Color(val: 0x657282)
 }
 
 extension Color {

@@ -13,6 +13,7 @@
 		C99FC89C1E852E3200BC89E4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99FC89B1E852E3200BC89E4 /* MainView.swift */; };
 		C99FC89E1E852EDA00BC89E4 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99FC89D1E852EDA00BC89E4 /* Style.swift */; };
 		C99FC8A01E8535DA00BC89E4 /* Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99FC89F1E8535DA00BC89E4 /* Switch.swift */; };
+		C9C8E7E01E89336200EB4BB8 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8E7DF1E89336200EB4BB8 /* Slider.swift */; };
 		C9E144351E840F490049954A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E144341E840F490049954A /* AppDelegate.swift */; };
 		C9E144371E840F490049954A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E144361E840F490049954A /* ViewController.swift */; };
 		C9E1443A1E840F490049954A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E144381E840F490049954A /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		C99FC89B1E852E3200BC89E4 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C99FC89D1E852EDA00BC89E4 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		C99FC89F1E8535DA00BC89E4 /* Switch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Switch.swift; sourceTree = "<group>"; };
+		C9C8E7DF1E89336200EB4BB8 /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		C9E144311E840F490049954A /* macawTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macawTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E144341E840F490049954A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9E144361E840F490049954A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				C99FC89F1E8535DA00BC89E4 /* Switch.swift */,
+				C9C8E7DF1E89336200EB4BB8 /* Slider.swift */,
 			);
 			name = Group;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				C99FC89C1E852E3200BC89E4 /* MainView.swift in Sources */,
 				C9E144351E840F490049954A /* AppDelegate.swift in Sources */,
 				C99FC89E1E852EDA00BC89E4 /* Style.swift in Sources */,
+				C9C8E7E01E89336200EB4BB8 /* Slider.swift in Sources */,
 				C99FC8A01E8535DA00BC89E4 /* Switch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

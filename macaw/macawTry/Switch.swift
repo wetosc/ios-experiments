@@ -28,7 +28,7 @@ class Switch: Group {
                        fill: Style.switchBGColor)
         
         circle = Shape(form: circle1,
-                       fill: Style.switchPrimaryColor)
+                       fill: Style.secondaryColor)
         circle.opaque = false
         
         text = Text(text: "ON",
@@ -54,7 +54,7 @@ class Switch: Group {
                                 during: 0.5, delay: 0)
         text.text = "ON"
         text.place = .move(dx: size.w/2 + 2, dy: center.y)
-        circle.fill = Style.switchPrimaryColor
+        circle.fill = Style.secondaryColor
     }
     
     private func toON() {
@@ -63,7 +63,7 @@ class Switch: Group {
                                 during: 0.5, delay: 0)
         text.text = "OFF"
         text.place = .move(dx: size.h/2-3, dy: size.h/2)
-        circle.fill = Style.switchSecondaryColor
+        circle.fill = Style.primaryColor
     }
     
 }
