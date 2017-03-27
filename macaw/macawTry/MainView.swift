@@ -62,7 +62,7 @@ class MainView: MacawView {
         let elem = Slider()
         
         return Group(contents: [ elem ],
-                     place: .move(dx: MainView.viewSize.w/2, dy: 120))
+                     place: .move(dx: MainView.viewSize.w/2, dy: 130))
     }
     
 }
