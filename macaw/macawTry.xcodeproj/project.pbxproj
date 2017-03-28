@@ -10,6 +10,7 @@
 		2A1C13F7C2CAF490473C405F /* Pods_macawTry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40BAA70297C1E272A893962 /* Pods_macawTry.framework */; };
 		AF91F9FACE1670614CF41039 /* Pods_macawTryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421F4D0694E3E16113920E60 /* Pods_macawTryTests.framework */; };
 		BA99CD1C8DFF20D9FC894F86 /* Pods_macawTryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285A7FD0152F992BD6A0B0F2 /* Pods_macawTryUITests.framework */; };
+		C98493561E8AB81D00FBB440 /* PieCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98493551E8AB81D00FBB440 /* PieCircle.swift */; };
 		C99FC89C1E852E3200BC89E4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99FC89B1E852E3200BC89E4 /* MainView.swift */; };
 		C99FC89E1E852EDA00BC89E4 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99FC89D1E852EDA00BC89E4 /* Style.swift */; };
 		C99FC8A01E8535DA00BC89E4 /* Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99FC89F1E8535DA00BC89E4 /* Switch.swift */; };
@@ -50,6 +51,7 @@
 		77CFC922CF2A1CF5C6DB168D /* Pods-macawTry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macawTry.release.xcconfig"; path = "Pods/Target Support Files/Pods-macawTry/Pods-macawTry.release.xcconfig"; sourceTree = "<group>"; };
 		A02C75456C32B2F22D744A79 /* Pods-macawTryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macawTryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-macawTryTests/Pods-macawTryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40BAA70297C1E272A893962 /* Pods_macawTry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_macawTry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98493551E8AB81D00FBB440 /* PieCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieCircle.swift; sourceTree = "<group>"; };
 		C99FC89B1E852E3200BC89E4 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C99FC89D1E852EDA00BC89E4 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		C99FC89F1E8535DA00BC89E4 /* Switch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Switch.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				C99FC89F1E8535DA00BC89E4 /* Switch.swift */,
 				C9C8E7DF1E89336200EB4BB8 /* Slider.swift */,
+				C98493551E8AB81D00FBB440 /* PieCircle.swift */,
 			);
 			name = Group;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 			files = (
 				C9E144371E840F490049954A /* ViewController.swift in Sources */,
 				C99FC89C1E852E3200BC89E4 /* MainView.swift in Sources */,
+				C98493561E8AB81D00FBB440 /* PieCircle.swift in Sources */,
 				C9E144351E840F490049954A /* AppDelegate.swift in Sources */,
 				C99FC89E1E852EDA00BC89E4 /* Style.swift in Sources */,
 				C9C8E7E01E89336200EB4BB8 /* Slider.swift in Sources */,

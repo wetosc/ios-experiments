@@ -16,11 +16,12 @@ class MainView: MacawView {
     )
     
     required init?(coder aDecoder: NSCoder) {
-
+        
         let top = MainView.topGroup()
         let midSlider = MainView.sliderGroup()
+        let pies = MainView.pieCirclesGroup()
         
-        super.init(node: Group(contents: [top, midSlider]), coder: aDecoder)
+        super.init(node: Group(contents: [top, midSlider, pies]), coder: aDecoder)
         
         self.backgroundColor = Style.bgColor.uiColor()
     }
@@ -61,8 +62,23 @@ class MainView: MacawView {
     private static func sliderGroup() -> Group {
         let elem = Slider()
         
+        elem.onValueChange { (value) in
+            print("Brightness: ",value)
+        }
+        
         return Group(contents: [ elem ],
                      place: .move(dx: MainView.viewSize.w/2, dy: 130))
     }
     
+    private static func pieCirclesGroup() -> Group {
+        let elem = PieCircle()
+        
+        let text1 = Text(text: "Memory used (MB)",
+                        font: Font(name: "SanFranciscoDisplay-Regular", size: 9),
+                        fill: Color.white, align: .mid, baseline: .mid,
+                        place: .move(dx: 0, dy: -elem.size.h/2 - 12))
+        let pie1 = Group(contents:[elem, text1], place: .move(dx: 0, dy: 0))
+        
+        return Group(contents: [pie1], place: .move(dx:MainView.viewSize.w/2, dy: 250))
+    }
 }

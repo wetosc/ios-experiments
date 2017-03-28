@@ -21,38 +21,39 @@ class Slider: Group {
     let size = Size(w: 200, h: 30)
     let center: Point
     
-    var firstLine, secondLine: Shape
+    var firstLine, secondLine, bigCircle: Shape
+    
+    var smallR, bigR: Double
+    
+    var listener: ((_ value: Double) -> Void)?
     
     init() {
         center = Point(x: size.w/2, y: size.h/2)
-        let smallR = size.h/2 - 6
-        let bigR = size.h/2
-        let leftX = -size.w/2
-        let totalLineLength = size.w - 2*4*smallR - 2*bigR - 6
+        smallR = size.h/2 - 6
+        bigR = size.h/2
         
-        
-        var x = leftX + smallR
+        var x = -size.w/2 + smallR
         
         let leftCircle = Shape(form: Circle(cx: 0, cy: 0, r: smallR),
                                stroke: Stroke(fill: Style.lightGrayColor, width: 3),
                                place: .move(dx: x, dy: 0) )
         x += 3*smallR
         
-        firstLine = Shape(form: Rect(x: 0, y: -1, w: totalLineLength/2, h: 2),
-                              fill: Style.secondaryColor,
-                              place: .move(dx: x, dy: 0))
-        x += totalLineLength/2 + bigR
+        firstLine = Shape(form: Rect(x: 0, y: -1, w: size.w/2 - 4*smallR, h: 2),
+                          fill: Style.secondaryColor,
+                          place: .move(dx: x, dy: 0))
+        x = 0
         
-        let bigCircle = Shape(form: Circle(cx: 0, cy: 0, r: bigR),
+        bigCircle = Shape(form: Circle(cx: 0, cy: 0, r: bigR),
                               fill: Style.bgColor,
                               stroke: Stroke(fill: Style.lightGrayColor, width: 5),
                               place: .move(dx: x, dy: 0) )
-        x += bigR
+        x = size.w/2 - 4*smallR
         
-        secondLine = Shape(form: Rect(x: 0, y: -1, w: totalLineLength/2, h: 2),
-                               fill: Style.primaryColor,
-                               place: .move(dx: x, dy: 0))
-        x += totalLineLength/2 + 3*smallR
+        secondLine = Shape(form: Rect(x: 0, y: -1, w: -size.w/2 + 4*smallR, h: 2),
+                           fill: Style.primaryColor,
+                           place: .move(dx: x, dy: 0))
+        x += 3*smallR
         
         let rightCircle = Shape(form: Circle(cx: 0, cy: 0, r: smallR),
                                 fill: Style.lightGrayColor,
@@ -62,20 +63,28 @@ class Slider: Group {
         super.init(contents: [leftCircle, firstLine, secondLine, bigCircle, rightCircle])
         
         bigCircle.onPan( { (pan) in
-            let newX = bigCircle.place.dx + pan.dx
-            if newX > leftX + 5*smallR && newX < self.size.w/2 - 5*smallR {
-                bigCircle.place = .move(dx: newX, dy: 0)
-                self.value = newX/(self.size.w - 10*smallR) + 0.5
+            let newX = self.bigCircle.place.dx + pan.dx
+            if newX > -self.size.w/2 + 4*self.smallR && newX < self.size.w/2 - 4*self.smallR {
+                self.bigCircle.place = .move(dx: newX, dy: 0)
+                self.value = round(newX/(self.size.w - 8*self.smallR)*100)/100 + 0.5
                 self.changeLines(newX: newX)
             }
         })
     }
     
     private func changeLines(newX: Double) {
-//        firstLine.form = Rect()
-//        secondLine.form = Rect()
+        firstLine.form = Rect(x: 0, y: -1, w: newX+size.w/2 - 4*smallR , h: 2)
+        secondLine.form = Rect(x: 0, y: -1, w: -size.w/2+newX+4*smallR, h: 2)
     }
     
-    public var value: Double = 0.5
+    public var value: Double = 0.5 {
+        didSet {
+            self.listener?(value)
+        }
+    }
+    
+    func onValueChange(listener: @escaping ((_ value: Double) -> Void)){
+        self.listener = listener
+    }
     
 }
