@@ -71,14 +71,24 @@ class MainView: MacawView {
     }
     
     private static func pieCirclesGroup() -> Group {
-        let elem = PieCircle()
-        
+        let elem1 = PieCircle()
+        elem1.text = "650"
+        elem1.value = 0.65
         let text1 = Text(text: "Memory used (MB)",
                         font: Font(name: "SanFranciscoDisplay-Regular", size: 9),
                         fill: Color.white, align: .mid, baseline: .mid,
-                        place: .move(dx: 0, dy: -elem.size.h/2 - 12))
-        let pie1 = Group(contents:[elem, text1], place: .move(dx: 0, dy: 0))
+                        place: .move(dx: 0, dy: -elem1.size.h/2 - 15))
+        let pie1 = Group(contents:[elem1, text1], place: .move(dx: -MainView.viewSize.w/4, dy: 0))
         
-        return Group(contents: [pie1], place: .move(dx:MainView.viewSize.w/2, dy: 250))
+        let elem2 = PieCircle()
+        elem2.text = "85%"
+        elem2.value = 0.85
+        let text2 = Text(text: "Data used 890MB",
+                         font: Font(name: "SanFranciscoDisplay-Regular", size: 9),
+                         fill: Color.white, align: .mid, baseline: .mid,
+                         place: .move(dx: 0, dy: -elem2.size.h/2 - 15))
+        let pie2 = Group(contents:[elem2, text2], place: .move(dx: MainView.viewSize.w/4, dy: 0))
+        
+        return Group(contents: [pie1, pie2], place: .move(dx:MainView.viewSize.w/2, dy: 250))
     }
 }

@@ -12,11 +12,7 @@ import EverLayout
 class ViewController: UIViewController {
     
     private var layout : EverLayout?
-    
-    public let inputUsername : UITextField = UITextField()
-    public let inputPassword : UITextField = UITextField()
-    public let buttonRegister : UIButton = UIButton()
-    public let buttonLogin : UIButton = UIButton()
+    public let exampleButton : UIButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +21,6 @@ class ViewController: UIViewController {
         
         self.layout = EverLayout(layoutData: layoutData as! Data)
         self.layout?.buildLayout(onView: self.view, viewEnvironment: self)
-        layout?.delegate = self
     }
     
 }
-
-extension ViewController: EverLayoutDelegate {
-    
-    func layout (_ layout : EverLayout , didLoadOnView view : UIView) {
-        
-    }
-}
-
