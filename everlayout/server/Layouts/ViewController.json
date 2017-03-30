@@ -2,7 +2,16 @@
     "name":"ViewController",
     "root":{
         "properties": {
-            "backgroundColor":"green"
+            "backgroundColor":"blue"
+        },
+        "views":{
+        	"textField": {
+        		"properties": {
+            		"backgroundColor":"yellow",
+            		"hidden":"false"
+        		}
+        	}
         }
+
     }
 }

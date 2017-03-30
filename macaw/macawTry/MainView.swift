@@ -10,6 +10,10 @@ import Macaw
 
 class MainView: MacawView {
     
+    
+    @IBOutlet weak var svgView: SVGView!
+    
+    
     static let viewSize = Size(
         w: Double(UIScreen.main.bounds.width),
         h: Double(UIScreen.main.bounds.height)

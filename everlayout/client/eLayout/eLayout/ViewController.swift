@@ -12,7 +12,8 @@ import EverLayout
 class ViewController: UIViewController {
     
     private var layout : EverLayout?
-    public let exampleButton : UIButton = UIButton()
+    
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,14 @@ class ViewController: UIViewController {
         
         self.layout = EverLayout(layoutData: layoutData as! Data)
         self.layout?.buildLayout(onView: self.view, viewEnvironment: self)
+        
+        textField.delegate = self
     }
     
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
+    }
 }
